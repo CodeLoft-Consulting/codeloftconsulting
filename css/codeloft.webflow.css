@@ -400,12 +400,11 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(60, 101, 224, 0.3)), to(rgba(17, 59, 173, 0.6)));
-  background-image: linear-gradient(180deg, rgba(60, 101, 224, 0.3), rgba(17, 59, 173, 0.6));
 }
 
 .contact-form {
   position: relative;
+  z-index: 1000;
   overflow: hidden;
   padding: 0px;
   border-radius: 7px;
@@ -463,6 +462,7 @@
   top: 0%;
   right: 0%;
   bottom: auto;
+  z-index: 99999;
 }
 
 .close-button {
@@ -471,6 +471,30 @@
   font-size: 32px;
   line-height: 32px;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.modal-backdrop {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 100;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(60, 101, 224, 0.3)), to(rgba(17, 59, 173, 0.6)));
+  background-image: linear-gradient(180deg, rgba(60, 101, 224, 0.3), rgba(17, 59, 173, 0.6));
 }
 
 @media screen and (max-width: 991px) {
@@ -673,6 +697,10 @@
 
   .close-button {
     line-height: 32px;
+  }
+
+  .modal-backdrop {
+    z-index: 9000;
   }
 }
 
