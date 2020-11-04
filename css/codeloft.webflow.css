@@ -497,6 +497,10 @@
   background-image: linear-gradient(180deg, rgba(60, 101, 224, 0.3), rgba(17, 59, 173, 0.6));
 }
 
+.div-block-2 {
+  padding-bottom: 20px;
+}
+
 @media screen and (max-width: 991px) {
   .footer {
     padding-right: 20px;
