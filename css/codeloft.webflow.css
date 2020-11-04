@@ -1,3 +1,10 @@
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+
 .sticky-nav {
   position: -webkit-sticky;
   position: sticky;
@@ -497,7 +504,7 @@
   background-image: linear-gradient(180deg, rgba(60, 101, 224, 0.3), rgba(17, 59, 173, 0.6));
 }
 
-.div-block-2 {
+.recaptcha {
   padding-bottom: 20px;
 }
 
@@ -701,10 +708,6 @@
 
   .close-button {
     line-height: 32px;
-  }
-
-  .modal-backdrop {
-    z-index: 9000;
   }
 }
 
