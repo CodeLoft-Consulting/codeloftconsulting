@@ -504,8 +504,11 @@ label {
   background-image: linear-gradient(180deg, rgba(60, 101, 224, 0.3), rgba(17, 59, 173, 0.6));
 }
 
-.recaptcha {
-  padding-bottom: 20px;
+.g-recaptcha {
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  padding-bottom: 0px;
 }
 
 @media screen and (max-width: 991px) {
