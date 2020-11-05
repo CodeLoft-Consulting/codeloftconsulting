@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Wed Nov 04 2020 21:46:57 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Thu Nov 05 2020 03:33:43 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5f7f8982324fd9298c318409" data-wf-site="5f7f8981324fd97705318408">
 <head>
   <meta charset="utf-8">
@@ -53,13 +53,27 @@
               <div class="center"><input type="submit" value="submit" data-wait="..." data-callback="onSubmit" data-action="submit" data-sitekey="6LeYHd8ZAAAAAOHWcHjsBuPvvqvAneyLEA_G6RRi" class="button w-button"></div>
               <div class="w-embed w-script">
                 <script>
-/*
 var Webflow = Webflow || [];
 Webflow.push(function () {
   // DOMready has fired
   // May now use jQuery and Webflow api
   $("#wf-form-Contact-Form").submit(function(e) {
     e.preventDefault();
+		// NEW
+		var $form = $(this);
+    $.ajax({
+      url: $form.attr("action"),
+      data: $form.serialize(),
+    }).done(function(resp) {
+      parent = $form.parent();
+      parent.children('form').css('display','none');
+      parent.children('.w-form-done').css('display','block');
+    }).fail(function() {
+      parent = $form.parent();
+      parent.find('.w-form-fail').css('display','block');
+    });
+		// OLD
+		/*
     var $form = $(this);
     $.post($form.attr("action"), $form.serialize())
     	.done(function() {
@@ -70,18 +84,17 @@ Webflow.push(function () {
       .fail(function() {
       		parent = $(form.parent());
           parent.find('.w-form-fail').css('display','block');
-      });
+      });*/
   });
 });
-*/
 </script>
               </div>
             </form>
             <div class="w-form-done">
-              <div>Thank you! Your submission has been received!</div>
+              <div>Thank you for your message! We will respond as soon as possible.</div>
             </div>
             <div class="w-form-fail">
-              <div>Oops! Something went wrong while submitting the form.</div>
+              <div>Sorry! Something went wrong. Please try again.</div>
             </div>
           </div>
         </div>
