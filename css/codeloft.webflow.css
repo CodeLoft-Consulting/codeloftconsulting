@@ -412,7 +412,9 @@ label {
 .contact-form {
   position: relative;
   z-index: 1000;
-  overflow: hidden;
+  overflow: auto;
+  max-height: 90%;
+  max-width: 90%;
   padding: 0px;
   border-radius: 7px;
   background-color: #fff;
@@ -492,6 +494,7 @@ label {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
