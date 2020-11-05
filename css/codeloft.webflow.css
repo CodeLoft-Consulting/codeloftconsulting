@@ -514,6 +514,12 @@ label {
   padding-bottom: 0px;
 }
 
+.form-footnote {
+  margin-bottom: 20px;
+  color: #727272;
+  font-size: 11px;
+}
+
 @media screen and (max-width: 991px) {
   .footer {
     padding-right: 20px;
