@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Thu Nov 05 2020 19:51:24 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Thu Nov 05 2020 20:00:31 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5f7f8982324fd9298c318409" data-wf-site="5f7f8981324fd97705318408" lang="en">
 <head>
   <meta charset="utf-8">
@@ -65,11 +65,11 @@ Webflow.push(function () {
   // May now use jQuery and Webflow api
   $("form[data-ajaxform]").submit(function(e) {
     e.preventDefault();
+		var $form = $(this);
 		// Check that Recaptcha is ready
 		grecaptcha.ready(function() {
       grecaptcha.execute('6LeYHd8ZAAAAAOHWcHjsBuPvvqvAneyLEA_G6RRi', {action: 'submit'}).then(function(token) {
         // Submit form
-        var $form = $(this);
         const REQUEST_PARAMETERS = {
           method: 'POST',
           headers: { 'Content-Type': `application/x-www-form-urlencoded` },
