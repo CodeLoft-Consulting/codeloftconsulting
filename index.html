@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Thu Nov 05 2020 20:00:31 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Fri Nov 13 2020 16:26:57 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5f7f8982324fd9298c318409" data-wf-site="5f7f8981324fd97705318408" lang="en">
 <head>
   <meta charset="utf-8">
@@ -20,13 +20,16 @@
   body, html { overflow-x:hidden; }
   .grecaptcha-badge { visibility: hidden; }
 </style>
-  <script async="" src="https://www.google.com/recaptcha/api.js?render=6LeYHd8ZAAAAAOHWcHjsBuPvvqvAneyLEA_G6RRi"></script>
+  <script defer="" src="https://www.google.com/recaptcha/api.js?render=6LeYHd8ZAAAAAOHWcHjsBuPvvqvAneyLEA_G6RRi"></script>
+  <script defer="" src="https://gist.github.com/kierster/543fbd1fce939fed0bb849eccf24492b.js"></script>
 </head>
 <body class="body">
   <div class="wrapper">
     <div data-w-id="ed0c11d9-1c9c-a2d2-b7f8-566f93d5c9d8" style="filter:blur(5px)" class="left left-podcast"></div>
     <div class="right">
-      <div class="top"><img src="images/CodeLoft-Logo.png" srcset="images/CodeLoft-Logo-p-500.png 500w, images/CodeLoft-Logo.png 534w" height="51" sizes="(max-width: 479px) 100vw, 267px" alt=""></div>
+      <div class="top">
+        <a href="index.html" aria-current="page" class="w-inline-block w--current"><img src="images/CodeLoft-Logo.png" srcset="images/CodeLoft-Logo-p-500.png 500w, images/CodeLoft-Logo.png 534w" height="51" sizes="(max-width: 479px) 100vw, 267px" alt="CodeLoft Consulting Logo"></a>
+      </div>
       <div class="middle">
         <h1 data-w-id="ed0c11d9-1c9c-a2d2-b7f8-566f93d5c9e3" style="opacity:0;-webkit-transform:translate3d(100PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(100PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(100PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(100PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="heading heading-app2">your website without limits.</h1>
         <p data-w-id="ed0c11d9-1c9c-a2d2-b7f8-566f93d5c9e5" style="-webkit-transform:translate3d(100PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(100PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(100PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(100PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="paragraph p-app2">Rise above the uninspired and ordinary templates flooding the market.</p>
@@ -34,6 +37,9 @@
       <div class="bottom">
         <a data-w-id="ffa508b1-7507-3fea-91bb-06d8676f40fc" href="#" class="button w-button">contact us</a>
       </div>
+      <footer class="footer-2">
+        <p class="footer-text">© CodeLoft Consulting<br>Sarnia, Ontario, Canada</p>
+      </footer>
     </div>
     <div data-w-id="63b12e60-6db1-7483-9634-1233127a55f6" style="opacity:0;display:none" class="modal-wrapper">
       <div data-w-id="d5490fc5-2550-6788-ffa3-d7397f518d9b" class="modal-backdrop"></div>
@@ -46,7 +52,7 @@
         </div>
         <div class="w-container">
           <div class="contact-form-block w-form">
-            <form id="wf-form-ContactForm" name="wf-form-ContactForm" data-name="ContactForm" method="post" action="/" data-netlify="true" data-ajaxform="true">
+            <form id="wf-form-ContactForm" name="wf-form-ContactForm" data-name="ContactForm" method="post" action="/" data-netlify="true" data-ajaxform="true" data-recaptchav3key="6LeYHd8ZAAAAAOHWcHjsBuPvvqvAneyLEA_G6RRi">
               <div class="contact-form-grid">
                 <div id="w-node-c47929bd2e13-8c318409"><label for="First-Name" id="contact-first-name">First name *</label><input type="text" class="w-input" maxlength="256" name="First-Name" data-name="First Name" id="First-Name" required=""></div>
                 <div id="w-node-c47929bd2e17-8c318409"><label for="Last-Name" id="contact-last-name">Last name *</label><input type="text" class="w-input" maxlength="256" name="Last-Name" data-name="Last Name" id="Last-Name" required=""></div>
@@ -57,43 +63,6 @@
                 </div>
               </div>
               <div class="center"><input type="submit" value="submit" data-wait="..." class="button w-button"></div>
-              <div class="w-embed w-script">
-                <script>
-var Webflow = Webflow || [];
-Webflow.push(function () {
-  // DOMready has fired
-  // May now use jQuery and Webflow api
-  $("form[data-ajaxform]").submit(function(e) {
-    e.preventDefault();
-		var $form = $(this);
-		// Check that Recaptcha is ready
-		grecaptcha.ready(function() {
-      grecaptcha.execute('6LeYHd8ZAAAAAOHWcHjsBuPvvqvAneyLEA_G6RRi', {action: 'submit'}).then(function(token) {
-        // Submit form
-        const REQUEST_PARAMETERS = {
-          method: 'POST',
-          headers: { 'Content-Type': `application/x-www-form-urlencoded` },
-          body: $form.serialize(),
-        };
-        fetch('/', REQUEST_PARAMETERS)
-          .then(() => {
-            var parent = $form.parent();
-            parent.children('form').css('display','none');
-            parent.children('.w-form-done').css('display','block');
-            parent.find('.w-form-fail').css('display','none');
-          })
-          .catch(error => {
-          	var parent = $form.parent();
-            parent.find('.w-form-fail').css('display','block');
-            parent.children('.w-form-done').css('display','none');
-            console.error("Form error: " + error.responseText);
-          });
-      });
-    });
-  });
-});
-</script>
-              </div>
             </form>
             <div class="w-form-done">
               <div>Thank you for your message! We will respond as soon as possible.</div>
